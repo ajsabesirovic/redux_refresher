@@ -4,12 +4,11 @@ import Products from "./components/Shop/Products";
 import { useSelector, useDispatch } from "react-redux";
 import { Fragment, useEffect } from "react";
 import Notification from "./components/UI/Notification";
-import sendCartData from "./store/cart-slice";
+import { sendCartData } from "./store/cart-slice";
 
 let isInitial = true;
 function App() {
   const dispatch = useDispatch();
-
   const showCart = useSelector((state) => state.ui.cartIsVisible);
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.ui.notification);
